@@ -1,29 +1,17 @@
-### Tableau Preview
-
-View the interactive dashboard here: [Tableau Dashboard](https://public.tableau.com/views/RideSharingTripDemandPattern/Ride-SharingTravelBehaviorPatterninNYC2025?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
-
-
-
-# Ride-Sharing Travel Behavior Patterns Analysis
+# Exploring Ride-Sharing Travel Behavior Patterns
 
 ## Overview
 
-This project analyzes large-scale ride-sharing trip records to understand travelers’ preferences across time and geographic zones, as well as how these patterns evolve over time. It combines **big data processing**, **data cleaning**, **performance metric design**, and **dashboard-oriented outputs** to support clear, efficient, and accessible insights for a broad audience, including researchers, practitioners, and policymakers.
+This project analyzes NYC high-volume for-hire vehicle activity with two goals:
 
-The original dataset contains **over 100 million trip records spanning 2019–2025**, which introduces nontrivial challenges in data storage, cleaning, and computation. Compared with small-scale datasets, this project emphasizes scalable workflows and reproducible pipelines for handling high-volume, high-frequency mobility data.
+1. Analyze spatial and temporal travel behavior among ride-sharing users.
+2. Forecast hourly ride-sharing pickup demand at the TLC taxi-zone level.
 
-This GitHub repository primarily showcases scripts for:
+The original dataset contains **over 100 million trip records spanning 2019–2026**, which introduces nontrivial challenges in data storage, cleaning, and computation. Compared with small-scale datasets, this project emphasizes scalable workflows and reproducible pipelines for handling high-volume, high-frequency mobility data.
 
-* Large-scale data processing using **PySpark**
-* Data cleaning and feature engineering using **Pandas**
-* Preparing analysis-ready datasets and summary metrics for downstream analysis and visualization
-
-## Objectives
-
-* Characterize ride-sharing travel behavior across time and space
-* Identify temporal dynamics and zone-level heterogeneity in travel patterns
-* Demonstrate scalable data engineering practices for transportation analytics
-* Enable rapid exploration and communication of results through well-structured outputs
+Large raw and processed datasets remain in external local storage. GitHub
+contains code, configuration templates, documentation, tests, and lightweight
+results needed to reproduce the workflow.
 
 ## Data Sources
 
@@ -37,17 +25,33 @@ Depending on the analysis, data may include:
 
 > **Note:** Some datasets may be restricted or not publicly shareable. All scripts are written to be modular and adaptable so users can apply them to their own data sources.
 
-## Project Structure
-<!--
+## Workflow
+
+1. Data foundation and validation
+2. Exploratory data analysis
+3. Spatial and temporal analysis
+4. Dashboard development
+5. Forecasting dataset construction
+6. Machine-learning and time-series modeling
+7. Model evaluation and error analysis
+8. Final reproducible reporting
+
+See [the complete workflow](docs/WORKFLOW.md).
+
+## Repository Structure
+
 ```
-├── data/               # Raw and processed data (not tracked if restricted)
-├── notebooks/          # Exploratory analysis and experiments
-├── src/                # Core data processing and modeling code
-├── results/            # Figures, tables, and summary outputs
-├── docs/               # Documentation and references
-└── README.md           # Project overview
+config/       Configuration templates and project settings
+data/         Storage documentation and small reference/sample data
+docs/         Scope, workflow, data dictionary, validation, and decisions
+notebooks/    Research notebook organization and migration guidance
+src/          Reusable Python package
+pipelines/    Executable workflow entry points
+dashboard/    Dashboard source and data contracts
+tests/        Automated unit and integration tests
+reports/      Lightweight validation, analysis, and modeling outputs
+models/       Model-artifact documentation
 ```
--->
 ## Tools and Technologies
 
 * **Python** (pandas, numpy, PySpark, statsmodels, scikit-learn)
@@ -55,31 +59,37 @@ Depending on the analysis, data may include:
 * Jupyter Notebooks
 * Git & GitHub for version control
 
-## Expected Outputs
+## Data Configuration
 
-* Reproducible and scalable data processing pipelines
-* Cleaned, analysis-ready mobility datasets
-* Policy- and operations-relevant metrics and KPIs
-* Visual summaries of ride-sharing travel behavior patterns
-* Research-ready figures and tables
+Copy `config/paths.example.yaml` to `config/paths.yaml` and update it for the
+local machine. The real configuration is ignored by Git, so machine-specific
+paths are not published.
 
-## Getting Started
+See the [data dictionary](docs/DATA_DICTIONARY.md).
 
-1. Clone the repository:
+## Development Setup
 
-   ```bash
-   git clone https://github.com/FTFever/Exploring-Ride-Sharing-Travel-Behavior-Patterns.git
-   ```
-2. Install required dependencies (Python and/or R environments as needed)
-3. Explore the notebooks and scripts for example workflows
+```bash
+python -m pip install -e ".[dev]"
+```
 
-## Project Status
+```powershell
+Copy-Item config/paths.example.yaml config/paths.yaml
+```
 
-🚧 **Active research project** — methods, structure, and scope may evolve as new data and research questions are introduced.
+## Dashboard
 
-## Contributions
+View the existing [Tableau dashboard](https://public.tableau.com/views/RideSharingTripDemandPattern/Ride-SharingTravelBehaviorPatterninNYC2025?:language=en-US&publish=yes&:display_count=n).
 
-Contributions, feedback, and suggestions are welcome. Please open an issue or submit a pull request.
+The current `Dashboard.html` embed and three historical figures remain at the
+repository root until their generation workflow is made reproducible.
+
+## Documentation
+
+- [Project scope](docs/PROJECT_SCOPE.md)
+- [Data sources](docs/DATA_SOURCES.md)
+- [Workflow](docs/WORKFLOW.md)
+- [Data dictionary](docs/DATA_DICTIONARY.md)
 
 ## Author
 
@@ -89,4 +99,5 @@ Specializing in transportation systems, causal inference, and big data analytics
 
 ## License
 
-This project is intended for research and educational purposes. Licensing details will be added as the project matures.
+A project license has not yet been selected. Until one is added, the repository
+does not grant an open-source reuse license.

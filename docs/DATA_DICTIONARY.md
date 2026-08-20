@@ -1,0 +1,132 @@
+# Processed-output data dictionary
+
+Entries refer to Spark Parquet directories under the configured processed-data
+directory. `YYYY` and `MM` represent year and month.
+
+## Citywide
+
+| Pattern | Grain | Purpose |
+|---|---|---|
+| `fhvhv_by_hour_YYYY.parquet` | pickup date x hour | Citywide hourly demand and metrics |
+| `fhvhv_by_15min_YYYY_MM.parquet` | pickup date x hour x 15-minute interval | Short-interval demand and wait time |
+| `fhvhv_by_date.parquet` | pickup date x platform | Daily Uber/Lyft comparison |
+| `fhvhv_by_DO_hour_YYYY.parquet` | drop-off date x hour | Citywide destination timing |
+
+## Pickup zones
+
+| Pattern | Grain | Purpose |
+|---|---|---|
+| `fhvhv_by_zone_month_YYYY.parquet` | pickup zone x year x month | Monthly spatial analysis |
+| `fhvhv_by_zone_date.parquet` | pickup zone x date x platform | Daily platform analysis; coverage requires investigation |
+| `fhvhv_by_zone_hour_YYYY_MM.parquet` | pickup zone x date x hour | Combined hourly demand; forecasting candidate |
+| `fhvhv_by_zone_15min_YYYY_MM.parquet` | pickup zone x date x hour x 15-minute interval | Fine-grained pickup/wait analysis |
+| `fhvhv_by_zone_hour_uber_YYYY_MM.parquet` | pickup zone x date x hour | Uber pickup demand |
+| `fhvhv_by_zone_hour_Lyft_YYYY_MM.parquet` | pickup zone x date x hour | Lyft pickup demand |
+
+## Drop-off zones
+
+| Pattern | Grain | Purpose |
+|---|---|---|
+| `fhvhv_by_DOzone_month_YYYY.parquet` | drop-off zone x year x month | Monthly destination analysis |
+| `fhvhv_by_DOzone_date.parquet` | drop-off zone x date x platform | Daily platform destination analysis |
+| `fhvhv_by_DOzone_hour_YYYY_MM.parquet` | drop-off zone x date x hour | Combined hourly destination demand |
+| `fhvhv_by_DOzone_hour_uber_YYYY_MM.parquet` | drop-off zone x date x hour | Uber destination demand |
+| `fhvhv_by_DOzone_hour_lyft_YYYY_MM.parquet` | drop-off zone x date x hour | Lyft destination demand |
+
+## Origin-destination pairs
+
+| Pattern | Grain | Purpose |
+|---|---|---|
+| `fhvhv_by_OD_month_YYYY.parquet` | PU x DO x year x month | Monthly OD flows |
+| `fhvhv_by_OD_date_YYYY.parquet` | PU x DO x date x platform | Daily OD flows; combined OD-date demand filtered to at least five trips |
+| `fhvhv_by_OD_hour_YYYY_MM.parquet` | PU x DO x date x hour | Combined hourly OD flows |
+| `fhvhv_by_OD_hour_uber_YYYY_MM.parquet` | PU x DO x date x hour | Uber hourly OD flows |
+| `fhvhv_by_OD_hour_lyft_YYYY_MM.parquet` | PU x DO x date x hour | Lyft hourly OD flows |
+
+## Dashboard products
+
+| Name | Grain | Status |
+|---|---|---|
+| `dash_spatial_zone_summary.parquet` | zone x direction x platform x year | Present |
+| `dash_trends_zone_dow_hour.parquet` | zone x direction x platform x year x weekday x hour | Planned |
+| `dash_trends_zone_daily.parquet` | zone x direction x platform x date | Planned |
+| `dash_od_flows.parquet` | OD pair x platform x year | Planned |
+
+## Metrics
+
+Families contain appropriate subsets of trip count, average wait time, fare per
+mile/minute/trip, total fare, driver pay, commission rate, distance, duration,
+and congestion-zone fees. Rate metrics use aggregate-first calculation: sum
+numerators and denominators before division.
+
+## Variable explanations
+
+### Identifiers and temporal variables
+
+| Variable | Type | Explanation |
+|---|---|---|
+| `PULocationID` | Integer | TLC taxi-zone identifier for the trip pickup location. |
+| `DOLocationID` | Integer | TLC taxi-zone identifier for the trip drop-off location. |
+| `LocationID` | Integer | Standardized zone identifier used by dashboard tables for either pickup or drop-off zones. |
+| `date` | Date | Calendar date derived from `pickup_datetime`, except explicitly drop-off-focused products. |
+| `year` | Integer | Calendar year derived from pickup time. |
+| `month` | Integer | Calendar month, from 1 through 12, derived from pickup time. |
+| `week` | Integer | Spark week-of-year value derived from pickup time. |
+| `day_of_week` | Integer | Spark weekday number: 1 is Sunday and 7 is Saturday. |
+| `is_weekend` | Integer | Equals 1 for Sunday or Saturday and 0 otherwise. |
+| `hour` | Integer | Pickup hour from 0 through 23. In dashboard tables it may also be the standardized name for a drop-off hour. |
+| `do_hour` | Integer | Drop-off hour from 0 through 23. |
+| `15min_interval` | Integer | Minute bucket within an hour: 0, 15, 30, or 45. |
+| `policy_period` | String | `pre_policy` before January 5, 2025 and `post_policy` on or after that date. |
+
+### Platform and dashboard dimensions
+
+| Variable | Type | Explanation |
+|---|---|---|
+| `hvfhs_license_num` | String | TLC high-volume FHV license code. `HV0003` represents Uber and `HV0005` represents Lyft. |
+| `platform` | String | Readable platform label used in dashboard tables: `Uber`, `Lyft`, or the derived combined value `All`. |
+| `direction` | String | Spatial direction represented by a dashboard record: `PU` for pickup or `DO` for drop-off. |
+
+### Demand and operating metrics
+
+The processing notebook uses an aggregate-first method. Monetary and duration
+numerators are summed within each group before rates are calculated.
+
+| Variable | Unit | Definition |
+|---|---|---|
+| `trip_count` | Trips | Number of cleaned trip records in the aggregation group. |
+| `avg_wait_time_sec` | Seconds | Sum of `pickup_datetime - request_datetime`, divided by `trip_count`. |
+| `base_fare_per_mile` | Currency/mile | Sum of `base_passenger_fare` divided by total `trip_miles`. |
+| `base_fare_per_min` | Currency/minute | Sum of `base_passenger_fare` divided by total trip duration in minutes. |
+| `base_fare_per_trip` | Currency/trip | Sum of `base_passenger_fare` divided by `trip_count`. |
+| `total_fare_per_trip` | Currency/trip | Total passenger charges divided by `trip_count`. Total charges include base fare, tolls, tips, congestion surcharge, sales tax, black-car-fund charge, airport fee, and CBD congestion fee. |
+| `driver_pay_per_mile` | Currency/mile | Sum of `driver_pay` divided by total `trip_miles`. |
+| `driver_pay_per_min` | Currency/minute | Sum of `driver_pay` divided by total trip duration in minutes. |
+| `driver_pay_per_trip` | Currency/trip | Sum of `driver_pay` divided by `trip_count`. |
+| `tnc_commission_rate` | Proportion | Sum of `base_passenger_fare + tips - driver_pay`, divided by total base passenger fare. This is the project-specific constructed measure, not an official reported commission percentage. |
+
+### OD and dashboard-specific metrics
+
+| Variable | Unit | Explanation |
+|---|---|---|
+| `total_cbd_fee` | Currency | Sum of CBD congestion fees within an OD aggregation group. |
+| `avg_base_fare` | Currency/trip | Average base passenger fare for the OD group. |
+| `avg_total_fare` | Currency/trip | Average constructed total fare for the OD group. |
+| `avg_driver_pay` | Currency/trip | Average driver payment for the OD group. |
+| `avg_trip_miles` | Miles/trip | Average trip distance for the OD group. |
+| `avg_duration_min` | Minutes/trip | Average trip duration for the OD group. |
+| `avg_fare` | Currency/trip | Dashboard alias derived from `total_fare_per_trip`. |
+| `avg_wait_min` | Minutes | Dashboard average wait time, calculated as `avg_wait_time_sec / 60`. |
+| `avg_pay` | Currency/trip | Dashboard alias derived from `driver_pay_per_trip`. |
+| `avg_commission` | Proportion | Dashboard alias derived from `tnc_commission_rate`. |
+| `daily_avg_trips` | Trips/day | Annual OD trip total divided by the number of calendar days in that year. |
+
+### Interpretation cautions
+
+- Zero-demand zone-hour combinations are generally absent rather than stored
+  as explicit zero rows.
+- Fare, wait-time, driver-pay, and commission metrics are outcomes observed
+  during the aggregation period. They are not automatically valid predictors
+  for a future-demand model.
+- OD daily products apply a documented low-volume filter; they do not represent
+  every observed OD pair.

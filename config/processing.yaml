@@ -1,0 +1,15 @@
+analysis_years: [2024, 2025]
+policy_date: "2025-01-05"
+
+cleaning:
+  minimum_trip_miles: 0
+  maximum_trip_miles: 200
+  minimum_trip_seconds: 0
+  maximum_trip_seconds: 10800
+  require_positive_base_fare: true
+  require_pickup_after_request: true
+  fill_null_cbd_congestion_fee: 0
+
+platforms:
+  HV0003: Uber
+  HV0005: Lyft

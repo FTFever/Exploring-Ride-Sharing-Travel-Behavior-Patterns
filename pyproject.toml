@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nyc-rideshare-patterns"
+version = "0.1.0"
+description = "Spatial-temporal analysis and zone-level demand forecasting for NYC high-volume for-hire vehicles."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.0",
+  "pyarrow>=14.0",
+  "pyspark>=3.5,<4",
+  "numpy>=1.24",
+  "matplotlib>=3.7",
+  "seaborn>=0.13",
+  "geopandas>=0.14",
+  "requests>=2.31",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["jupyterlab>=4.0", "pytest>=8.0", "ruff>=0.5"]
+modeling = ["scikit-learn>=1.4", "statsmodels>=0.14"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
