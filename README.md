@@ -81,8 +81,9 @@ Copy-Item config/paths.example.yaml config/paths.yaml
 
 View the existing [Tableau dashboard](https://public.tableau.com/views/RideSharingTripDemandPattern/Ride-SharingTravelBehaviorPatterninNYC2025?:language=en-US&publish=yes&:display_count=n).
 
-The current `Dashboard.html` embed and three historical figures remain at the
-repository root until their generation workflow is made reproducible.
+The previous `Dashboard.html` embed and three historical figures are preserved
+under [`archive/legacy-showcase`](archive/legacy-showcase/README.md) until their
+generation workflow is made reproducible.
 
 ## Documentation
 
