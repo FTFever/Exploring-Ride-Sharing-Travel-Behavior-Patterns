@@ -4,7 +4,7 @@
 
 This repository presents part of an ongoing research project to understand **ridesharing travel behavior and forecast its demand in New York City**. It connects data preparation, descriptive analysis and predictive modeling: where pickups occur, how demand varies over hours, days and seasons, how its spatial distribution changes, and how accurately future hourly activity can be forecast at the taxi-zone level.
 
-The current repository exhibits the project's **pickup-demand workflow and results**. It uses NYC Taxi and Limousine Commission high-volume for-hire vehicle (HVFHV) records across recorded platforms, together with taxi-zone geography, calendar/holiday features and hourly weather. It is not an Uber-only dataset. The focus is cleaned observed trip totals rather than requests, unmet demand, vehicle availability or duration.
+The current repository exhibits the project's **pickup-demand workflow and results**. It uses NYC Taxi and Limousine Commission high-volume for-hire vehicle (HVFHV) records across recorded platforms, together with taxi-zone geography, calendar/holiday features and hourly weather. 
 
 **Maintainer:** FTFever · **Code license:** [MIT](LICENSE) · **Data:** obtained separately from the [documented sources](docs/DATA_SOURCES.md); datasets are not uploaded.
 
