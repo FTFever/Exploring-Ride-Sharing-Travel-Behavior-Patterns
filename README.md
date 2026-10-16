@@ -19,15 +19,17 @@ The current repository exhibits the project's **pickup-demand workflow and resul
 | Stage | Notebook | What it contains |
 |---|---|---|
 | Ingestion | [01](notebooks/01_data_ingestion.ipynb) | Source acquisition and inspection |
-| Preparation | [02a: 2021–2023](notebooks/02a_prepare_hourly_2021_2023.ipynb) | Cleaning, features, hourly pickup/dropoff/OD aggregates and checkpoints |
-| Preparation | [02b: 2024–2025](notebooks/02b_prepare_hourly_2024_2025.ipynb) | The remaining two years of hourly aggregates |
-| Validation | [02c: selected repairs](notebooks/02c_validate_selected_repairs.ipynb) | Four staged outputs and validation; no automatic promotion |
+| Preparation | [02](notebooks/02_data_preparation_2019_2025.ipynb) | One sequential workflow for February–December 2019 and 2021–2025; pickup/dropoff/OD aggregates and validation |
 | Baseline | [03](notebooks/03_analysis_baseline_demand.ipynb) | Coverage, totals, daily and hourly pickup trends |
 | Temporal | [04](notebooks/04_analysis_temporal_patterns.ipynb) | Hour, weekday, weekend and monthly profiles; recorded findings |
 | Spatial | [05](notebooks/05_analysis_spatial_patterns.ipynb) | Pickup maps, concentration and share changes; recorded findings |
 | Forecasting | [06](notebooks/06_model_hourly_demand_forecasting.ipynb) | Features, tuning, ARIMA/RF/XGBoost/neural networks, SHAP, errors and completed results |
 
-The 02 series now has three explicit stages. Superseded versions remain locally and have been removed from the current GitHub tree. Each notebook starts with directory configuration. Notebook 06 defaults to **review** mode; choose **features** or **full** deliberately before generating features or training. See the [execution guide](docs/REPRODUCIBILITY.md) for dependencies, paths and run order.
+### Executed research record
+
+Notebooks **01 and 03–06 are published with real execution counts, tables and inline figures**, so the research process and its results can be read directly in GitHub. Notebook **02 is intentionally unexecuted**: it documents one fresh sequential preparation run without repair/recovery branches. It covers 71 source months, excluding 2020; the HVFHV series starts in February 2019. Descriptive analysis remains restricted to 2021–2025.
+
+The old 02 variants remain backed up locally. Each notebook begins with directory configuration, uses clearer section notes, and explains the inputs/outputs of important code blocks. Notebook 06's executed **review** mode reports the completed modeling run from saved metric summaries and figures without retraining. Choose **features** or **full** and use the new reproduction run name to compute new artifacts. Historical results and new runs are kept separate. See the [execution guide](docs/REPRODUCIBILITY.md).
 
 ## Pickup-demand findings
 
@@ -119,7 +121,8 @@ Weekly demand history dominates SHAP attribution. Removing spatial or holiday fe
 ├── reports/
 │   ├── published/
 │   │   ├── analysis_2021_2025/ # Refreshed pickup-demand figures
-│   │   └── modeling/          # Evaluation figures, summary metrics, checksums
+│   │   ├── modeling/          # Evaluation figures, summary metrics, checksums
+│   │   └── source_inventory/  # Raw-file metadata counts and schema summaries
 │   ├── validation/          # Local validation destination; Git placeholder
 │   └── modeling/            # Local experiment destination; Git placeholder
 ├── data/                    # Local data directories and acquisition guidance
@@ -137,7 +140,7 @@ Code, instructions, figures and aggregate evaluation metrics are published. Raw/
 
 ## Reproduce and interpret
 
-Start with [data sources](docs/DATA_SOURCES.md), then [installation and execution](docs/REPRODUCIBILITY.md). Read [data limitations](docs/DATA_LIMITATIONS.md) before interpreting results and [modeling design](docs/MODELING.md) before comparing predictors. The descriptive cells were executed against all 60 monthly pickup aggregates; model outputs were analyzed without retraining. Static notebook checks run in CI. This is not a fresh end-to-end run of raw aggregation and model fitting on a new machine.
+Start with [data sources](docs/DATA_SOURCES.md), then [installation and execution](docs/REPRODUCIBILITY.md). Read [data limitations](docs/DATA_LIMITATIONS.md) before interpreting results and [modeling design](docs/MODELING.md) before comparing predictors. Source metadata were inspected for all 71 requested files. The descriptive cells were executed against all 60 monthly pickup aggregates, and notebook 06 was executed in saved-results review mode without retraining. Static notebook checks run in CI. This is not a fresh end-to-end run of raw aggregation and model fitting on a new machine.
 
 ## Next research steps
 

@@ -12,7 +12,7 @@ import pyarrow.parquet as pq
 RAW=Path(os.environ.get('RIDESHARE_RAW_DIR', 'data/raw/fhvhv'))/'fhvhv_tripdata_2026-01.parquet'
 ROOT=Path(os.environ.get('RIDESHARE_PROCESSED_DIR', 'data/processed'))/'model_evaluation_2026'
 OUTPUT=ROOT/'fhvhv_by_zone_hour_2026_01_01_to_07.parquet'
-REFERENCE=Path('notebooks/02b_prepare_hourly_2024_2025.ipynb')
+REFERENCE=Path('notebooks/02_data_preparation_2019_2025.ipynb')
 START='2026-01-01 00:00:00';END='2026-01-08 00:00:00'
 RULES="""trip_miles > 0 AND trip_time_cal > 0 AND base_passenger_fare > 0
  AND trip_speed > 1 AND driver_pay > 0 AND pickup_datetime >= request_datetime

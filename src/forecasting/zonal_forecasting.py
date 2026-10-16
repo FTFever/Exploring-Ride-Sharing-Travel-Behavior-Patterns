@@ -326,7 +326,17 @@ def read_month(folder, year, month, db, allow_partial=False):
     assert (
         files and (folder / "_SUCCESS").exists()
     ), f"Missing/incomplete pickup aggregate: {folder}"
-    if year in (2021, 2022, 2023):
+    preparation_marker = folder / "_preparation_validation.json"
+    if preparation_marker.exists():
+        # A fresh consolidated run records its own monthly reconciliation evidence.
+        record = json.loads(preparation_marker.read_text(encoding="utf-8"))
+        assert record["passed"] and (
+            record["family"],
+            record["year"],
+            record["month"],
+        ) == ("pickup", year, month)
+        assert record["cleaned_rows"] == record["aggregate_trips"]
+    elif year in (2021, 2022, 2023):
         c = json.loads(
             (folder / "_aggregation_contract.json").read_text(encoding="utf-8")
         )

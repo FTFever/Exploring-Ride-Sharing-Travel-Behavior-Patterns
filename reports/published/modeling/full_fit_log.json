@@ -1,0 +1,842 @@
+[
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "RandomForest_01",
+    "model": "RandomForest",
+    "training_examples": 99914,
+    "seconds": 168.6857513999994,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "RandomForest_02",
+    "model": "RandomForest",
+    "training_examples": 99914,
+    "seconds": 314.6637645999999,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "RandomForest_03",
+    "model": "RandomForest",
+    "training_examples": 99914,
+    "seconds": 458.8419371,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "RandomForest_04",
+    "model": "RandomForest",
+    "training_examples": 99914,
+    "seconds": 266.7236821000006,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "RandomForest_05",
+    "model": "RandomForest",
+    "training_examples": 99914,
+    "seconds": 569.6731622999996,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "RandomForest_06",
+    "model": "RandomForest",
+    "training_examples": 99914,
+    "seconds": 344.5433515000004,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "XGBoost_01",
+    "model": "XGBoost",
+    "training_examples": 99914,
+    "seconds": 29.444950799999788,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "XGBoost_02",
+    "model": "XGBoost",
+    "training_examples": 99914,
+    "seconds": 10.678559699999823,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "XGBoost_03",
+    "model": "XGBoost",
+    "training_examples": 99914,
+    "seconds": 16.439569200001642,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "XGBoost_04",
+    "model": "XGBoost",
+    "training_examples": 99914,
+    "seconds": 13.38771590000033,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "XGBoost_05",
+    "model": "XGBoost",
+    "training_examples": 99914,
+    "seconds": 21.293046499999036,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "XGBoost_06",
+    "model": "XGBoost",
+    "training_examples": 99914,
+    "seconds": 23.337354199999027,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "NeuralNetwork_01",
+    "model": "NeuralNetwork",
+    "training_examples": 99914,
+    "seconds": 15.169520299999931,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "NeuralNetwork_02",
+    "model": "NeuralNetwork",
+    "training_examples": 99914,
+    "seconds": 34.99325950000093,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "NeuralNetwork_03",
+    "model": "NeuralNetwork",
+    "training_examples": 99914,
+    "seconds": 19.630205999999816,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "NeuralNetwork_04",
+    "model": "NeuralNetwork",
+    "training_examples": 99914,
+    "seconds": 21.125506700000187,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "NeuralNetwork_05",
+    "model": "NeuralNetwork",
+    "training_examples": 99914,
+    "seconds": 35.13399190000018,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "NeuralNetwork_06",
+    "model": "NeuralNetwork",
+    "training_examples": 99914,
+    "seconds": 20.913110499999675,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "arima_100",
+    "model": "ARIMA",
+    "training_examples": 9789912,
+    "seconds": 329.6574564000002,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "arima_111",
+    "model": "ARIMA",
+    "training_examples": 9789912,
+    "seconds": 562.879756100001,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 1,
+    "origin": "2025-04-01 00:00",
+    "candidate": "arima_211",
+    "model": "ARIMA",
+    "training_examples": 9789912,
+    "seconds": 1382.691347,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "RandomForest_01",
+    "model": "RandomForest",
+    "training_examples": 99915,
+    "seconds": 148.58633009999903,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "RandomForest_02",
+    "model": "RandomForest",
+    "training_examples": 99915,
+    "seconds": 298.423589,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "RandomForest_03",
+    "model": "RandomForest",
+    "training_examples": 99915,
+    "seconds": 441.8515153999997,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "RandomForest_04",
+    "model": "RandomForest",
+    "training_examples": 99915,
+    "seconds": 262.64657090000037,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "RandomForest_05",
+    "model": "RandomForest",
+    "training_examples": 99915,
+    "seconds": 576.6995879999995,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "RandomForest_06",
+    "model": "RandomForest",
+    "training_examples": 99915,
+    "seconds": 355.0557253999996,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "XGBoost_01",
+    "model": "XGBoost",
+    "training_examples": 99915,
+    "seconds": 29.91952979999951,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "XGBoost_02",
+    "model": "XGBoost",
+    "training_examples": 99915,
+    "seconds": 10.7799341000009,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "XGBoost_03",
+    "model": "XGBoost",
+    "training_examples": 99915,
+    "seconds": 16.133895000000848,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "XGBoost_04",
+    "model": "XGBoost",
+    "training_examples": 99915,
+    "seconds": 13.367795199999819,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "XGBoost_05",
+    "model": "XGBoost",
+    "training_examples": 99915,
+    "seconds": 20.662324199998693,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "XGBoost_06",
+    "model": "XGBoost",
+    "training_examples": 99915,
+    "seconds": 21.29005479999978,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "NeuralNetwork_01",
+    "model": "NeuralNetwork",
+    "training_examples": 99915,
+    "seconds": 14.59995549999985,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "NeuralNetwork_02",
+    "model": "NeuralNetwork",
+    "training_examples": 99915,
+    "seconds": 32.643570199999886,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "NeuralNetwork_03",
+    "model": "NeuralNetwork",
+    "training_examples": 99915,
+    "seconds": 13.41195609999886,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "NeuralNetwork_04",
+    "model": "NeuralNetwork",
+    "training_examples": 99915,
+    "seconds": 20.90402069999982,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "NeuralNetwork_05",
+    "model": "NeuralNetwork",
+    "training_examples": 99915,
+    "seconds": 26.50945689999935,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "NeuralNetwork_06",
+    "model": "NeuralNetwork",
+    "training_examples": 99915,
+    "seconds": 26.900273299999753,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "arima_100",
+    "model": "ARIMA",
+    "training_examples": 10364304,
+    "seconds": 340.64117740000074,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "arima_111",
+    "model": "ARIMA",
+    "training_examples": 10364304,
+    "seconds": 598.2674306999997,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 2,
+    "origin": "2025-07-01 00:00",
+    "candidate": "arima_211",
+    "model": "ARIMA",
+    "training_examples": 10364304,
+    "seconds": 1473.8850598000008,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "RandomForest_01",
+    "model": "RandomForest",
+    "training_examples": 99916,
+    "seconds": 151.10239360000014,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "RandomForest_02",
+    "model": "RandomForest",
+    "training_examples": 99916,
+    "seconds": 290.26530079999975,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "RandomForest_03",
+    "model": "RandomForest",
+    "training_examples": 99916,
+    "seconds": 438.1062972,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "RandomForest_04",
+    "model": "RandomForest",
+    "training_examples": 99916,
+    "seconds": 263.0054479999999,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "RandomForest_05",
+    "model": "RandomForest",
+    "training_examples": 99916,
+    "seconds": 584.5941299999977,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "RandomForest_06",
+    "model": "RandomForest",
+    "training_examples": 99916,
+    "seconds": 342.0272285000028,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "XGBoost_01",
+    "model": "XGBoost",
+    "training_examples": 99916,
+    "seconds": 29.391763499999797,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "XGBoost_02",
+    "model": "XGBoost",
+    "training_examples": 99916,
+    "seconds": 10.198747999998886,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "XGBoost_03",
+    "model": "XGBoost",
+    "training_examples": 99916,
+    "seconds": 16.248477200002526,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "XGBoost_04",
+    "model": "XGBoost",
+    "training_examples": 99916,
+    "seconds": 13.174527700000908,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "XGBoost_05",
+    "model": "XGBoost",
+    "training_examples": 99916,
+    "seconds": 20.011903900001926,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "XGBoost_06",
+    "model": "XGBoost",
+    "training_examples": 99916,
+    "seconds": 22.716838399999688,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "NeuralNetwork_01",
+    "model": "NeuralNetwork",
+    "training_examples": 99916,
+    "seconds": 21.648195799996756,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "NeuralNetwork_02",
+    "model": "NeuralNetwork",
+    "training_examples": 99916,
+    "seconds": 29.786747600002855,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "NeuralNetwork_03",
+    "model": "NeuralNetwork",
+    "training_examples": 99916,
+    "seconds": 13.531197500000417,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "NeuralNetwork_04",
+    "model": "NeuralNetwork",
+    "training_examples": 99916,
+    "seconds": 32.01036069999827,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "NeuralNetwork_05",
+    "model": "NeuralNetwork",
+    "training_examples": 99916,
+    "seconds": 29.841609200000676,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "NeuralNetwork_06",
+    "model": "NeuralNetwork",
+    "training_examples": 99916,
+    "seconds": 18.386979599999904,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "arima_100",
+    "model": "ARIMA",
+    "training_examples": 10945008,
+    "seconds": 347.5161106000014,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "arima_111",
+    "model": "ARIMA",
+    "training_examples": 10945008,
+    "seconds": 641.1635309000012,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 3,
+    "origin": "2025-10-01 00:00",
+    "candidate": "arima_211",
+    "model": "ARIMA",
+    "training_examples": 10945008,
+    "seconds": 1532.1455849999984,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "RandomForest_01",
+    "model": "RandomForest",
+    "training_examples": 99905,
+    "seconds": 150.91151970000283,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "RandomForest_02",
+    "model": "RandomForest",
+    "training_examples": 99905,
+    "seconds": 296.931406300002,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "RandomForest_03",
+    "model": "RandomForest",
+    "training_examples": 99905,
+    "seconds": 436.9262720000006,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "RandomForest_04",
+    "model": "RandomForest",
+    "training_examples": 99905,
+    "seconds": 272.22210939999786,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "RandomForest_05",
+    "model": "RandomForest",
+    "training_examples": 99905,
+    "seconds": 582.3741169000023,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "RandomForest_06",
+    "model": "RandomForest",
+    "training_examples": 99905,
+    "seconds": 345.1263708000006,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "XGBoost_01",
+    "model": "XGBoost",
+    "training_examples": 99905,
+    "seconds": 30.214728099999775,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "XGBoost_02",
+    "model": "XGBoost",
+    "training_examples": 99905,
+    "seconds": 10.509234099998139,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "XGBoost_03",
+    "model": "XGBoost",
+    "training_examples": 99905,
+    "seconds": 15.75875779999842,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "XGBoost_04",
+    "model": "XGBoost",
+    "training_examples": 99905,
+    "seconds": 13.321693399997457,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "XGBoost_05",
+    "model": "XGBoost",
+    "training_examples": 99905,
+    "seconds": 21.63072749999992,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "XGBoost_06",
+    "model": "XGBoost",
+    "training_examples": 99905,
+    "seconds": 22.428026199999294,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "NeuralNetwork_01",
+    "model": "NeuralNetwork",
+    "training_examples": 99905,
+    "seconds": 16.085544100002153,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "NeuralNetwork_02",
+    "model": "NeuralNetwork",
+    "training_examples": 99905,
+    "seconds": 40.2860503999982,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "NeuralNetwork_03",
+    "model": "NeuralNetwork",
+    "training_examples": 99905,
+    "seconds": 17.24315580000257,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "NeuralNetwork_04",
+    "model": "NeuralNetwork",
+    "training_examples": 99905,
+    "seconds": 33.64937809999901,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "NeuralNetwork_05",
+    "model": "NeuralNetwork",
+    "training_examples": 99905,
+    "seconds": 34.36177029999817,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "NeuralNetwork_06",
+    "model": "NeuralNetwork",
+    "training_examples": 99905,
+    "seconds": 30.14924329999849,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "arima_100",
+    "model": "ARIMA",
+    "training_examples": 11330040,
+    "seconds": 383.30229260000124,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "arima_111",
+    "model": "ARIMA",
+    "training_examples": 11330040,
+    "seconds": 652.5783708999988,
+    "warnings": []
+  },
+  {
+    "feature_set": "full",
+    "fold": 4,
+    "origin": "2025-12-01 00:00",
+    "candidate": "arima_211",
+    "model": "ARIMA",
+    "training_examples": 11330040,
+    "seconds": 1563.7095461999997,
+    "warnings": []
+  }
+]

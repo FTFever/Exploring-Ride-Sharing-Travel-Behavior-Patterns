@@ -7,3 +7,6 @@ Figures in [analysis_2021_2025](analysis_2021_2025/) were regenerated from 60 au
 [modeling](modeling/) contains charts and aggregate metric summaries copied from the completed zonal_week_ahead_v1 research run. Training uses 2021–2025, with four 2025 validation weeks and January 1–7, 2026 as the reserved final test. No training was repeated for this publication. Checksums record copied artifact provenance. See [results interpretation](../../docs/MODEL_RESULTS.md).
 
 No source datasets, feature matrices, zone-hour prediction records or fitted model binaries are distributed. Metric CSV files summarize evaluation outcomes and support the reported tables. Historical out-of-scope plots remain local rather than in the current published tree.
+
+## Executed notebooks and source inventory
+Notebook outputs are retained in 01 and 03–06 so tables and plots are visible in GitHub. The 06 outputs are from a real read-only report execution using the completed research artifacts, not a new training run. Notebook 02 alone has outputs cleared. [source_inventory](source_inventory/) contains only file-footer counts and schema summaries for 71 selected source files; these are neither raw trip records nor a full row-level quality audit.

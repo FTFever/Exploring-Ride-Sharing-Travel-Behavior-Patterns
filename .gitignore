@@ -65,3 +65,6 @@ archive/legacy-showcase/
 reports/published/figures/
 reports/published/demand_analysis/
 reports/published/06_zonal_forecasting/
+notebooks/02a_prepare_hourly_2021_2023.ipynb
+notebooks/02b_prepare_hourly_2024_2025.ipynb
+notebooks/02c_validate_selected_repairs.ipynb
