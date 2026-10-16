@@ -1,14 +1,16 @@
-# Definitions, quality and limits
+# Data quality and interpretation
 
-- HVFHV includes all recorded platforms; these results are not exclusively Uber trips.
-- Existing cleaning excludes nonpositive fare/pay, distance, duration, invalid request order and extreme distances/speeds. It can exclude real trips and must be interpreted as a cleaned sample.
-- Existing 2024/2025 rules deduplicate complete rows before filling CBD fee nulls. Distance is greater than zero and at most 200 miles; calculated duration is greater than zero and at most 10,800 seconds; speed is greater than 1 and at most 120 mph. Speed uses reported trip_time; calculated duration uses pickup/dropoff timestamps.
-- Pickup and OD use pickup date/hour. Earlier-year dropoff uses dropoff calendar date/hour. Legacy 2024/2025 dropoff uses pickup date with dropoff hour. Cross-year dropoff comparisons therefore include a definition break. Publication preserves the processing logic.
-- January 2019 and 2020 are outside the earlier-year preparation scope. A missing date is not zero demand. February 2019 and January 2021 have boundary limitations recorded in aggregation contracts.
-- Several 2019 low-demand dates coincide with cleaning attrition (July 31, August 1–4 and August 19). Extremely low values are not automatically genuine demand collapses. Below-median values are not inherently outliers. Any same-weekday/hour/month replacement is an analytical imputation that must preserve observations and a replacement flag; do not overwrite raw data.
-- Hourly pickup/dropoff totals differ because trips cross hours/dates and because of the legacy dropoff definition. Monthly city totals can look similar without hourly equality.
-- Taxi-zone shapefiles contain multiple polygons for some IDs. Dissolve by LocationID before expecting unique zone records. Not every observed location has mapped geometry.
-- DST produces missing spring local hours and repeated autumn local hours. UTC is the weather key. Local-fold weather values are combined; precipitation is an hourly intensity average, not a two-hour total.
-- The four 2024/2025 repairs are staged, separately validated artifacts. Their existence does not imply promotion into original analytical directories.
-- The January 2025 policy-date indicator supports descriptive comparisons; these notebooks do not establish a causal policy effect.
-- Saved charts are research outputs from existing runs. Their presence does not certify full data validation or completed model tuning. No winning model is claimed until all relevant evaluations finish.
+## Analysis population
+The published baseline, temporal and spatial analyses use cleaned pickups for January 2021–December 2025. All recorded HVFHV platforms are included; the results are not exclusively Uber trips. All 60 monthly pickup inputs passed the refreshed key/date/count checks. These checks do not establish that provider records capture every real trip.
+
+## Cleaning and coverage
+Cleaning excludes invalid request order, nonpositive fare/pay/distance/duration and extreme distances/speeds. It therefore describes a cleaned sample. Existing rules deduplicate complete rows before CBD-fee null handling. Distance is greater than zero and at most 200 miles; calculated duration is greater than zero and at most 10,800 seconds; speed is greater than 1 and at most 120 mph. Speed uses reported trip_time; calculated duration uses timestamps. Missing source months are not zeros. Low demand is not an outlier merely because it falls below the median; no new imputation was performed for this release.
+
+## Geography and clock time
+Taxi-zone polygon records are dissolved by LocationID. Unknown/unmapped locations remain in citywide totals and share denominators but cannot be mapped. Maps show per-day volume or citywide share, not density by land area. Local clock hours include daylight-saving transitions. Weather uses canonical UTC with explicit local-time processing.
+
+## Forecasting
+Model training uses 2021–2025, with four 2025 validation weeks and a separate January 1–7, 2026 held-out forecast test. This test week is not part of descriptive trend analysis. Weather resolution, low-variation zones, sampling budgets and single-week testing limit generalization. See [model results](MODEL_RESULTS.md) for metric-specific limitations.
+
+## Causal interpretation
+Annual changes and the January 2025 indicator are descriptive. They do not identify the causal effect of congestion pricing. A separate design with appropriate counterfactuals, controls and diagnostics is planned.

@@ -1,3 +1,3 @@
-# Fitted models
+# Model artifacts
 
-Fitted artifacts remain local under the configured notebook 06 run output. No trained model or completed winning-model comparison is distributed. See docs/MODELING.md for selection and evaluation design.
+Fitted binary models remain local under notebook 06's run directory. Completed validation and final-test metric summaries and graphs are published in reports/published/modeling. XGBoost_06 was selected by validation MAE; the neural network has lower RMSE on the held-out week. See docs/MODEL_RESULTS.md for the full comparison and limitations.

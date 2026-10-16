@@ -1,38 +1,9 @@
-# Saved research figures
+# Published research results
 
-These are existing research outputs, copied without rerunning analysis. They may reflect different notebook execution dates and are not evidence of completed model selection. Raw records, analytical datasets, feature matrices, model objects, and Tableau packaged data are excluded.
+## Pickup analysis: 2021–2025
+Figures in [analysis_2021_2025](analysis_2021_2025/) were regenerated from 60 audited monthly pickup aggregates for this revision. They include daily/hourly trends, normalized temporal profiles, annual spatial patterns, concentration and the two requested share comparisons. Descriptive plots exclude 2019, 2020 and 2026.
 
-- [06_zonal_forecasting/zonal_week_ahead_v1/06_training_coverage_and_folds.png](06_zonal_forecasting/zonal_week_ahead_v1/06_training_coverage_and_folds.png)
-- [demand_analysis/03_affected_days_hourly_comparison.png](demand_analysis/03_affected_days_hourly_comparison.png)
-- [demand_analysis/03_common_month_year_comparison.png](demand_analysis/03_common_month_year_comparison.png)
-- [demand_analysis/03_daily_demand.png](demand_analysis/03_daily_demand.png)
-- [demand_analysis/03_hourly_demand_entire_period.png](demand_analysis/03_hourly_demand_entire_period.png)
-- [demand_analysis/03_monthly_demand.png](demand_analysis/03_monthly_demand.png)
-- [demand_analysis/04_hourly_pickup_profiles.png](demand_analysis/04_hourly_pickup_profiles.png)
-- [demand_analysis/04_monthly_seasonality.png](demand_analysis/04_monthly_seasonality.png)
-- [demand_analysis/04_weekday_hour_heatmaps.png](demand_analysis/04_weekday_hour_heatmaps.png)
-- [demand_analysis/04_weekday_weekend_profiles.png](demand_analysis/04_weekday_weekend_profiles.png)
-- [demand_analysis/05_demand_concentration.png](demand_analysis/05_demand_concentration.png)
-- [demand_analysis/05_dropoff_share_change.png](demand_analysis/05_dropoff_share_change.png)
-- [demand_analysis/05_dropoff_zone_maps.png](demand_analysis/05_dropoff_zone_maps.png)
-- [demand_analysis/05_pickup_share_change.png](demand_analysis/05_pickup_share_change.png)
-- [demand_analysis/05_pickup_zone_maps.png](demand_analysis/05_pickup_zone_maps.png)
-- [demand_analysis/05_top_zones.png](demand_analysis/05_top_zones.png)
-- [figures/3_1_monthly_trips.png](figures/3_1_monthly_trips.png)
-- [figures/3_2_hourly_profile.png](figures/3_2_hourly_profile.png)
-- [figures/3_3_hourly_pre_post.png](figures/3_3_hourly_pre_post.png)
-- [figures/3_4_dow_demand.png](figures/3_4_dow_demand.png)
-- [figures/3_5_daily_trend.png](figures/3_5_daily_trend.png)
-- [figures/3_6_hourly_trend.png](figures/3_6_hourly_trend.png)
-- [figures/4_1_top20_zones.png](figures/4_1_top20_zones.png)
-- [figures/4_2_borough_demand.png](figures/4_2_borough_demand.png)
-- [figures/4_3_zone_heatmap.png](figures/4_3_zone_heatmap.png)
-- [figures/5_2_zone_prepost_change.png](figures/5_2_zone_prepost_change.png)
-- [figures/5_3_cbd_vs_outer.png](figures/5_3_cbd_vs_outer.png)
-- [figures/5_4_airport_trips.png](figures/5_4_airport_trips.png)
-- [figures/5_5_adjacent_zone_prepost.png](figures/5_5_adjacent_zone_prepost.png)
-- [figures/demand_choropleth.png](figures/demand_choropleth.png)
-- [figures/demand_choropleth_quantile.png](figures/demand_choropleth_quantile.png)
-- [figures/demand_top30_change_map.png](figures/demand_top30_change_map.png)
-- [figures/demand_yoy_maps.png](figures/demand_yoy_maps.png)
-- [figures/total_trips_yoy_maps.png](figures/total_trips_yoy_maps.png)
+## Hourly pickup forecasting
+[modeling](modeling/) contains charts and aggregate metric summaries copied from the completed zonal_week_ahead_v1 research run. Training uses 2021–2025, with four 2025 validation weeks and January 1–7, 2026 as the reserved final test. No training was repeated for this publication. Checksums record copied artifact provenance. See [results interpretation](../../docs/MODEL_RESULTS.md).
+
+No source datasets, feature matrices, zone-hour prediction records or fitted model binaries are distributed. Metric CSV files summarize evaluation outcomes and support the reported tables. Historical out-of-scope plots remain local rather than in the current published tree.

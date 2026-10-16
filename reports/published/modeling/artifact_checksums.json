@@ -1,0 +1,20 @@
+{
+  "06_cv_fold_stability.png": "7c75a15a49ccd250154de5b8b4687705571ff0d2567f6463f6b6740940dfc830",
+  "06_cv_model_metrics.png": "be13e3c54e5c532f3d497f9b62400d25bf6241d5e965ed40d1cb14cedd445a1b",
+  "06_feature_ablation.png": "5c13c80ca96dbfd0c77088810a72c43db7439b5c5852800fbf1a2ad5c27eae40",
+  "06_final_test_airport.png": "4361aa2ff6e0bde36e516271e12f100e375e89efcee7b6dd053b42e7b1230db1",
+  "06_final_test_airport_metrics.csv": "13df20f5378726952be3e40c1b54492021c431b73f0fcbdbea1ca3252cca1cf4",
+  "06_final_test_borough.png": "f2b862f0e3f5b31cc5f6cc73e6a005f6addc07dfc404f1ce8dc9fdf6d6ab124f",
+  "06_final_test_borough_metrics.csv": "382e1f42e75764ac0ee1a953f55dca19d4046b02d9b5dc5a18477d1af6339340",
+  "06_final_test_demand_band_metrics.csv": "8af660cd7220fcc1b58f3908006d5961e0f6fc1cd68f5ccc9ee630fb54f2a6c0",
+  "06_final_test_horizon_errors.png": "f2b014ed654bfde893436b2c78bb278a82a2c961d2b9c5b0bd0a29d0e202c99d",
+  "06_final_test_model_comparison.png": "94979dfa22f4415237e3b3968e719ee6c6cfb1cdd352080317fcaa00c2d26a58",
+  "06_final_test_XGBoost_overlay.png": "f6d167b2498e6aff330e83a3931f4bf33dd94ae8ceaa7909d83b097370b3ffb6",
+  "06_final_test_XGBoost_zone_maps.png": "b80400579d94437e26b802db8e71b3b28b64cf1fb6b2677989c75d6e2efde30f",
+  "06_shap_global_importance.png": "f597c7b1fae197f305bd9aeaac87e145d2147dbe3eadccc784ce3d42b6e3346f",
+  "cv_candidate_summary.csv": "ef2749f1e6eb51478a11085752cb3f42f856debf4a9e8235238f210329060ca3",
+  "feature_ablation_comparison.csv": "59e3d21375ca031fa729912b4a51d48f1002bdea28bc39219071b20910fa7208",
+  "final_test_metrics.csv": "468ec4a467e1c17563c7d7e5e2061f978e97b7b8dd5d7910f37b19d594f65497",
+  "full_cv_metrics.csv": "4a873c633d9554ff96afe2553914cbec3e3d1ab20a7ad9dbf23b5ad6e2f89e9f",
+  "shap_validation_importance.csv": "21659ca134e3705b7ab4090a3eda717a5a4cae68e4e627355cc13c9698904ffb"
+}

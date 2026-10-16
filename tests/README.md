@@ -1,5 +1,3 @@
-# Tests
+# Verification
 
-Tests will cover ingestion, cleaning, metric calculations, schema and grain
-validation, aggregate reconciliation, time splits, and forecasting features.
-Unit tests will use small synthetic fixtures rather than large local data.
+Run `python tests/check_publication.py` for syntax, portable paths, empty notebook outputs, scope and document checks. This static check does not execute Spark or fit models. The October 2026 analysis refresh separately executed the descriptive analysis cells on all 60 existing monthly pickup aggregates. CI intentionally uses no source datasets or expensive model training.

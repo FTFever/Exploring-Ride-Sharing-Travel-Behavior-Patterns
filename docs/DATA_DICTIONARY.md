@@ -1,6 +1,5 @@
 # Processed-output data dictionary
 
-**Time-definition caveat:** the historical dropoff products do not share one date basis. Earlier-year outputs use dropoff calendar date/hour; legacy 2024/2025 products use pickup date with dropoff hour. OD uses pickup date/hour. See [data limitations](DATA_LIMITATIONS.md). Product names below describe historical schemas and do not certify availability or validation of every month.
 
 Entries refer to Spark Parquet directories under the configured processed-data
 directory. `YYYY` and `MM` represent year and month.

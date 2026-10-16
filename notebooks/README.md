@@ -1,3 +1,3 @@
-# Research notebooks
+# Notebook guide
 
-See the repository README and docs/REPRODUCIBILITY.md for sequence, configuration and execution modes. Published copies retain processing logic with portable paths and cleared outputs. The original 02-series implementations overlap: select the appropriate scope rather than replaying all of them. Notebook 06 starts in review mode. Existing plot outputs are separately published under reports/published.
+Use the ordered notebook table in [the execution guide](../docs/REPRODUCIBILITY.md). The 02 series now has three explicit stages: 02a (2021–2023 hourly preparation), 02b (2024–2025 hourly preparation), and 02c (selected staged repair validation). Original overlapping 02 files remain local and are removed from the current GitHub tree. Their original commit history is retained. All descriptive analyses focus on pickups in 2021–2025. Notebook 06 has completed saved results; its publication default remains review mode to avoid accidental training. Every notebook starts with directory configuration.

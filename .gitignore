@@ -55,3 +55,13 @@ outputs/
 prepare_publication.py
 jpserver-*.json
 kernel-*.json
+
+# Superseded publication copies are retained locally, not republished.
+notebooks/02_data_processing.ipynb
+notebooks/02_data_processing_additions_06_03.ipynb
+notebooks/02_data_processing_additions_20261013.ipynb
+notebooks/02_data_repairs_2024_2025_hourly.ipynb
+archive/legacy-showcase/
+reports/published/figures/
+reports/published/demand_analysis/
+reports/published/06_zonal_forecasting/

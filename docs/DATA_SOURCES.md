@@ -17,7 +17,7 @@ Monthly Parquet URL pattern:
 https://d37ci6vzurychx.cloudfront.net/trip-data/fhvhv_tripdata_YYYY-MM.parquet
 ```
 
-Download the months required by the chosen notebook into RAW_DIR. Earlier-year preparation covers February–December 2019 and all months of 2021–2023; existing 2024–2025 preparation supports analysis/model training. Final testing needs January 2026 raw data but prepares only January 1–7. Availability of additional local months does not mean all are used. TLC/provider records may contain omissions or errors; inspect schemas and validation rather than assuming completeness. Consult [NYC terms](https://www.nyc.gov/main/terms-of-use) for source rights.
+Download the months required by the chosen notebook into RAW_DIR. Organized preparation covers January 2021–December 2025 for descriptive analysis and model training. Final testing needs January 2026 raw data but prepares only January 1–7. Availability of additional local months does not mean all are used. TLC/provider records may contain omissions or errors; inspect schemas and validation rather than assuming completeness. Consult [NYC terms](https://www.nyc.gov/main/terms-of-use) for source rights.
 
 ## Weather acquisition and transformations
 
