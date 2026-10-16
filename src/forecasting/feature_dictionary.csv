@@ -1,0 +1,41 @@
+﻿feature,group,definition,unit,encoding,availability
+zone_id,zone_identity,"Taxi-zone LocationID; an identifier, not a numerical ordering.",category,one-hot,known at origin
+borough,zone_identity,Borough recorded in the taxi-zone shapefile; Unknown when unmapped.,category,one-hot,known at origin
+is_airport_zone,spatial,"1 for EWR (1), JFK (132), or LaGuardia (138); otherwise 0.",0/1,numeric,known at origin
+zone_latitude,spatial,Latitude of a representative point within the zone geometry.,degrees north,numeric,known at origin
+zone_longitude,spatial,Longitude of the same representative point.,degrees east,numeric,known at origin
+zone_area_km2,spatial,Zone polygon area calculated in a projected coordinate system.,km²,numeric,known at origin
+zone_unmapped,spatial,1 when the zone has no matching shapefile geometry.,0/1,numeric,known at origin
+forecast_horizon,calendar,Hours ahead of issue time; horizon 1 is the first forecast hour.,1–168,numeric,known at origin
+hour,calendar,Local clock hour of the target timestamp.,0–23,one-hot,known at origin
+day_of_week,calendar,Target weekday: Monday=0 through Sunday=6.,0–6,one-hot,known at origin
+month,calendar,Calendar month of the target timestamp.,1–12,one-hot,known at origin
+hour_of_week,calendar,Target weekday × 24 + target hour.,0–167,numeric,known at origin
+is_weekend,calendar,1 when the target falls on Saturday or Sunday.,0/1,numeric,known at origin
+hour_sin,calendar,sin(2π × target hour / 24).,unitless,numeric,known at origin
+hour_cos,calendar,cos(2π × target hour / 24).,unitless,numeric,known at origin
+annual_sin,calendar,"Sine of the annual cycle, accounting for leap years.",unitless,numeric,known at origin
+annual_cos,calendar,"Cosine of the annual cycle, accounting for leap years.",unitless,numeric,known at origin
+is_holiday,holiday,1 on a selected US federal actual or observed holiday date.,0/1,numeric,known at origin
+holiday_name,holiday,"Federal holiday name for the target date, or none.",category,one-hot,known at origin
+is_observed_holiday,holiday,1 on a shifted observed date that differs from the actual holiday date.,0/1,numeric,known at origin
+days_to_holiday,holiday,"Calendar days until the next selected holiday, including 0 today.",days,numeric,known at origin
+days_since_holiday,holiday,"Calendar days since the previous selected holiday, including 0 today.",days,numeric,known at origin
+is_year_end_period,holiday,1 during the predefined December 24–January 2 period.,0/1,numeric,known at origin
+pickup_lag_168h,demand_lags,Same-zone pickups 168 clock hours before the target hour.,trips/hour,numeric,strictly pre-origin demand
+pickup_lag_336h,demand_lags,Same-zone pickups 336 clock hours before the target hour.,trips/hour,numeric,strictly pre-origin demand
+pickup_lag_504h,demand_lags,Same-zone pickups 504 clock hours before the target hour.,trips/hour,numeric,strictly pre-origin demand
+same_hour_week_mean_4w,demand_lags,"Mean pickups at target lags 168, 336, 504 and 672 hours.",trips/hour,numeric,strictly pre-origin demand
+recent_mean_7d,demand_recent,Zone mean over 7 days strictly before the forecast origin; fixed across the week.,trips/hour,numeric,strictly pre-origin demand
+recent_mean_28d,demand_recent,Zone mean over 28 days strictly before the forecast origin.,trips/hour,numeric,strictly pre-origin demand
+recent_std_28d,demand_recent,Zone standard deviation over those same pre-origin 28 days.,trips/hour,numeric,strictly pre-origin demand
+recent_trend_ratio,demand_recent,Latest pre-origin 7-day mean divided by the preceding 7-day mean; missing if denominator=0.,ratio,numeric,strictly pre-origin demand
+temperature_2m,weather,Past-only mean air temperature for the target month/hour.,°C,numeric,past-only climatology at origin
+apparent_temperature,weather,Past-only mean feels-like temperature for the target month/hour.,°C,numeric,past-only climatology at origin
+relative_humidity_2m,weather,Past-only mean relative humidity for the target month/hour.,%,numeric,past-only climatology at origin
+precipitation,weather,Past-only mean hourly total precipitation for the target month/hour.,mm/hour,numeric,past-only climatology at origin
+rain,weather,Past-only mean hourly liquid precipitation for the target month/hour.,mm/hour,numeric,past-only climatology at origin
+snowfall,weather,Past-only mean hourly snowfall for the target month/hour.,cm/hour,numeric,past-only climatology at origin
+wind_speed_10m,weather,Past-only mean wind speed at 10 m for the target month/hour.,m/s,numeric,past-only climatology at origin
+cloud_cover,weather,Past-only mean cloud cover for the target month/hour.,%,numeric,past-only climatology at origin
+pressure_msl,weather,Past-only mean sea-level pressure for the target month/hour.,hPa,numeric,past-only climatology at origin

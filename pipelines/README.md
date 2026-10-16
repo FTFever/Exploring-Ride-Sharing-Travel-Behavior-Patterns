@@ -1,5 +1,3 @@
-# Pipelines
+# Supporting commands
 
-This directory will contain thin executable entry points that call tested
-functions in `src/rideshare`. Scripts will be added as notebook logic is
-migrated; processing logic should not be duplicated here.
+The portable publication commands are `published_collect_hourly_weather.py` and `published_aggregate_test_week_2026.py`; run from the repository root after configuring environment paths. See docs/REPRODUCIBILITY.md. Historical local session runners and notebook generators are intentionally not distributed. Preparation logic lives in the 01/02 notebooks and modeling logic in 06 plus src/forecasting.

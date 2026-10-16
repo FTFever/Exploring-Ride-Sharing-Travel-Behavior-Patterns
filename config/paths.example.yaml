@@ -1,6 +1,5 @@
-# Copy to config/paths.yaml and update for your machine.
-# The local file is excluded from Git.
-raw_data_dir: "D:/Rideshare industry_NYC/fhvhv"
-processed_data_dir: "D:/Rideshare industry_NYC/output"
-reference_data_dir: "Q:/我的云端硬盘/Uber_dataset/TLC_pipeline/data/raw"
-notebook_archive_dir: "Q:/我的云端硬盘/Uber_dataset/TLC_pipeline/notebooks"
+# Notebook paths are configured in their first cell or environment variables.
+raw_data_dir: data/raw/fhvhv
+processed_data_dir: data/processed
+reference_data_dir: data/reference
+notebook_archive_dir: notebooks

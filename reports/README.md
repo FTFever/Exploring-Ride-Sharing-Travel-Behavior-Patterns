@@ -1,4 +1,3 @@
-# Reports and figures
+# Reports
 
-This directory stores lightweight, reproducible validation summaries, analysis
-figures, and model-evaluation reports suitable for GitHub.
+See [published figure inventory](published/README.md) for shareable existing visual outputs. No raw/feature/prediction datasets are included. Coverage and model completion claims must be read with docs/DATA_LIMITATIONS.md and docs/REPRODUCIBILITY.md.

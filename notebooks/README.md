@@ -1,20 +1,3 @@
-# Notebooks
+# Research notebooks
 
-The active notebook archive currently resides at:
-
-`Q:/我的云端硬盘/Uber_dataset/TLC_pipeline/notebooks`
-
-It covers ingestion, processing, validation, demand EDA, and dashboard
-aggregation. Notebooks will be migrated in a separate reviewed change after
-machine-specific paths and stable production logic are extracted.
-
-Intended groups:
-
-1. `01_data_foundation`
-2. `02_exploration`
-3. `03_spatiotemporal_analysis`
-4. `04_dashboard`
-5. `05_modeling`
-
-Notebooks explain questions, display evidence, and interpret results. Reusable
-cleaning, aggregation, validation, and modeling logic belongs in `src`.
+See the repository README and docs/REPRODUCIBILITY.md for sequence, configuration and execution modes. Published copies retain processing logic with portable paths and cleared outputs. The original 02-series implementations overlap: select the appropriate scope rather than replaying all of them. Notebook 06 starts in review mode. Existing plot outputs are separately published under reports/published.

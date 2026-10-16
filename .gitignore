@@ -42,3 +42,16 @@ spark-warehouse/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Research artifacts and local session state
+outputs/
+*.joblib
+*.pkl
+*.duckdb*
+*.tmp
+*.bak
+*backup*.ipynb
+.Rhistory
+prepare_publication.py
+jpserver-*.json
+kernel-*.json
